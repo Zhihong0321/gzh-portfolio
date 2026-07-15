@@ -1,13 +1,273 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=./The%20Console/The%20Console.dc.html">
-  <title>Portfolio</title>
-  <script>location.replace('./The%20Console/The%20Console.dc.html');</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #131211; color: #e9e6e0; font-family: 'JetBrains Mono', monospace; -webkit-font-smoothing: antialiased; }
+  a { color: #e9e6e0; text-decoration: none; }
+  a:hover { color: #ffb224; }
+  ::selection { background: rgba(255,178,36,0.25); }
+  @keyframes dotPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+  @keyframes dotPulseSlow { 0%, 100% { opacity: 0.9; } 50% { opacity: 0.2; } }
+  @keyframes cursorBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+</style>
+
 </head>
 <body>
-  <p><a href="./The%20Console/The%20Console.dc.html">Open portfolio</a></p>
+<!-- ============ TOP BAR ============ -->
+<div style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 24px; background: rgba(19,18,17,0.88); backdrop-filter: blur(8px); border-bottom: 1px solid #2b2925; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8d897f;">
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #ffb224; animation: dotPulseSlow 3s ease-in-out infinite;"></span>
+    <span style="color: #e9e6e0;">OPS / CONSOLE</span>
+    <span style="color: #4b4842;">·</span>
+    <span>PIPELINE / ACTIVE</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 18px;">
+    <a href="#operator" style="color: #a5a196;">AI OPERATOR</a>
+    <span>LOCAL LOCAL</span>
+    <a href="#offer" style="color: #ffb224; border: 1px solid #ffb22455; padding: 6px 12px; letter-spacing: 0.14em;" style-hover="background: rgba(255,178,36,0.08); color: #ffb224;">FOUNDING SLOT →</a>
+  </div>
+</div>
+
+<!-- ============ 1 · HERO ============ -->
+<section data-screen-label="Hero" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; max-width: 1100px; margin: 0 auto; padding: 140px 24px 80px; box-sizing: border-box;">
+  <div style="font-size: 13px; color: #ffb224; min-height: 20px; letter-spacing: 0.04em;">
+    <span>System online. Operator present.</span><span style="display: none; width: 8px; height: 15px; background: #ffb224; margin-left: 2px; vertical-align: text-bottom; animation: cursorBlink 0.9s step-end infinite;"></span>
+  </div>
+  <div style="opacity: 1; transition: opacity 0.35s ease;">
+    <h1 style="font-size: clamp(34px, 5.6vw, 64px); font-weight: 500; line-height: 1.12; letter-spacing: -0.02em; margin: 28px 0 0; max-width: 20ch; text-wrap: pretty;">A production pipeline, run by humans, powered by AI.</h1>
+    <p style="font-size: clamp(14px, 1.5vw, 17px); font-weight: 300; color: #a5a196; line-height: 1.7; margin: 26px 0 0; max-width: 52ch; text-wrap: pretty;">Quality you can hold accountable. Speed you won't believe. Prices that follow from both.</p>
+  </div>
+  <div style="opacity: 1; transition: opacity 0.9s ease; font-family: 'Newsreader', serif; font-style: italic; font-size: 19px; color: #c9c4b8; margin-top: 26px;">— we watch everything it ships.</div>
+  <div style="opacity: 1; transition: opacity 0.35s ease; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-top: 44px;">
+    <a href="#pipeline" style="display: inline-block; background: #ffb224; color: #131211; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; padding: 14px 26px;" style-hover="background: #ffc351; color: #131211;">SEE THE PIPELINE</a>
+    <span style="font-size: 12px; color: #8d897f;">Founding-client offer: your first project, up to 2 weeks of work, zero upfront. ↓</span>
+  </div>
+  <div style="opacity: 1; transition: opacity 0.7s ease; display: flex; gap: 32px; flex-wrap: wrap; margin-top: 72px; padding-top: 22px; border-top: 1px solid #2b2925; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8d897f;">
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #ffb224; animation: dotPulseSlow 3s ease-in-out infinite;"></span>PIPELINE / ACTIVE</span>
+    <span>LATENCY: LOW</span>
+    <span>LOCAL TIME LOCAL</span>
+    <span style="color: #ffb224;">FOUNDING SLOTS: 5 REMAINING</span>
+  </div>
+</section>
+
+<!-- ============ 2 · THE PIPELINE ============ -->
+<section id="pipeline" data-screen-label="Pipeline" style="max-width: 1100px; margin: 0 auto; padding: 110px 24px; box-sizing: border-box; border-top: 1px solid #2b2925;">
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">02 / SYSTEM DIAGRAM</div>
+  <p data-fade="" style="font-size: clamp(22px, 3vw, 32px); font-weight: 400; line-height: 1.35; margin: 26px 0 0; max-width: 34ch; text-wrap: pretty;">Fast, cheap, good — pick two. Unless you change how the work is made.</p>
+  <div data-fade="" style="display: flex; align-items: stretch; flex-wrap: wrap; gap: 0; margin-top: 64px;">
+    <div style="flex: 1 1 160px; border: 1px solid #2b2925; padding: 22px 20px; min-width: 150px;">
+      <div style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">STAGE / 01</div>
+      <div style="font-size: 15px; font-weight: 500; margin-top: 12px;">INTAKE</div>
+    </div>
+    <div style="flex: 0 0 24px; align-self: center; height: 1px; background: #3a372f;"></div>
+    <div style="flex: 1 1 160px; border: 1px solid #2b2925; padding: 22px 20px; min-width: 150px;">
+      <div style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">STAGE / 02</div>
+      <div style="font-size: 15px; font-weight: 500; margin-top: 12px;">BUILD</div>
+    </div>
+    <div style="flex: 0 0 24px; align-self: center; height: 1px; background: #3a372f;"></div>
+    <div style="flex: 1.4 1 220px; border: 1px solid #ffb22455; background: rgba(255,178,36,0.04); padding: 22px 20px; min-width: 200px; position: relative;">
+      <div style="font-size: 10px; letter-spacing: 0.16em; color: #ffb224;">STAGE / 03 · MANNED</div>
+      <div style="font-size: 15px; font-weight: 500; margin-top: 12px;">HUMAN REVIEW</div>
+      <div style="font-family: 'Newsreader', serif; font-style: italic; font-size: 15px; color: #c9c4b8; line-height: 1.5; margin-top: 12px;">— every deliverable is corrected and signed by a person.</div>
+    </div>
+    <div style="flex: 0 0 24px; align-self: center; height: 1px; background: #3a372f;"></div>
+    <div style="flex: 1 1 160px; border: 1px solid #2b2925; padding: 22px 20px; min-width: 150px;">
+      <div style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">STAGE / 04</div>
+      <div style="font-size: 15px; font-weight: 500; margin-top: 12px;">SHIP</div>
+    </div>
+  </div>
+  <div data-fade="" style="margin-top: 72px; border-top: 1px solid #2b2925;">
+    <div style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: space-between; align-items: baseline; padding: 26px 0; border-bottom: 1px solid #2b2925;">
+      <div style="font-size: 12px; letter-spacing: 0.16em; color: #ffb224; flex: 0 0 120px;">QUALITY</div>
+      <div style="font-size: 14px; font-weight: 300; color: #cfcabf; line-height: 1.6; flex: 1 1 400px; max-width: 60ch;">A human reviews, corrects, and signs off on every deliverable.</div>
+    </div>
+    <div style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: space-between; align-items: baseline; padding: 26px 0; border-bottom: 1px solid #2b2925;">
+      <div style="font-size: 12px; letter-spacing: 0.16em; color: #ffb224; flex: 0 0 120px;">SPEED</div>
+      <div style="font-size: 14px; font-weight: 300; color: #cfcabf; line-height: 1.6; flex: 1 1 400px; max-width: 60ch;">The pipeline compresses weeks into days. Most projects ship in under 7 days.</div>
+    </div>
+    <div style="display: flex; gap: 24px; flex-wrap: wrap; justify-content: space-between; align-items: baseline; padding: 26px 0; border-bottom: 1px solid #2b2925;">
+      <div style="font-size: 12px; letter-spacing: 0.16em; color: #ffb224; flex: 0 0 120px;">PRICE</div>
+      <div style="font-size: 14px; font-weight: 300; color: #cfcabf; line-height: 1.6; flex: 1 1 400px; max-width: 60ch;">You pay for output, not hours. Efficiency is the discount.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · WHAT WE BUILD ============ -->
+<section data-screen-label="Services" style="max-width: 1100px; margin: 0 auto; padding: 110px 24px; box-sizing: border-box; border-top: 1px solid #2b2925;">
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">03 / CAPABILITIES</div>
+  <h2 data-fade="" style="font-size: clamp(22px, 3vw, 32px); font-weight: 400; margin: 26px 0 0;">What we build</h2>
+  <div data-fade="" style="margin-top: 48px; border-top: 1px solid #2b2925;">
+    <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: baseline; padding: 30px 0; border-bottom: 1px solid #2b2925;">
+      <div style="font-size: 14px; font-weight: 500; letter-spacing: 0.06em; flex: 0 0 320px;">ECOMMERCE STOREFRONTS</div>
+      <div style="font-size: 14px; font-weight: 300; color: #a5a196; line-height: 1.6; flex: 1 1 360px;">Custom-designed stores, launched in days, wired to a real commerce backend.</div>
+    </div>
+    <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: baseline; padding: 30px 0; border-bottom: 1px solid #2b2925;">
+      <div style="font-size: 14px; font-weight: 500; letter-spacing: 0.06em; flex: 0 0 320px;">WEBSITES &amp; LANDING PAGES</div>
+      <div style="font-size: 14px; font-weight: 300; color: #a5a196; line-height: 1.6; flex: 1 1 360px;">From brief to live site fast enough to feel unreasonable.</div>
+    </div>
+    <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: baseline; padding: 30px 0; border-bottom: 1px solid #2b2925;">
+      <div style="font-size: 14px; font-weight: 500; letter-spacing: 0.06em; flex: 0 0 320px;">UI REDESIGNS &amp; RE-SKINS</div>
+      <div style="font-size: 14px; font-weight: 300; color: #a5a196; line-height: 1.6; flex: 1 1 360px;">Your product, re-dressed in your brand without breaking what works.</div>
+    </div>
+    <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: baseline; padding: 30px 0; border-bottom: 1px solid #ffb22455; background: rgba(255,178,36,0.035); margin: 0 -16px; padding-left: 16px; padding-right: 16px;">
+      <div style="font-size: 14px; font-weight: 500; letter-spacing: 0.06em; color: #ffb224; flex: 0 0 320px;">AI SITE OPERATORS</div>
+      <div style="font-size: 14px; font-weight: 300; color: #cfcabf; line-height: 1.6; flex: 1 1 360px;">An AI agent that keeps working after launch: running your site, improving its content and SEO, replying to routine enquiries, refreshing design, and shipping the next useful feature.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 · AI SITE OPERATOR ============ -->
+<section id="operator" data-screen-label="AI Site Operator" style="max-width: 1100px; margin: 0 auto; padding: 110px 24px; box-sizing: border-box; border-top: 1px solid #2b2925;">
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #ffb224;">04 / ONGOING SYSTEM</div>
+  <div data-fade="" style="display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr); gap: clamp(32px, 6vw, 82px); align-items: end; margin-top: 34px;">
+    <div>
+      <h2 style="font-size: clamp(28px, 4vw, 46px); font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; margin: 0; max-width: 18ch; text-wrap: pretty;">Your site can keep getting better after launch.</h2>
+      <p style="font-size: 15px; font-weight: 300; color: #cfcabf; line-height: 1.75; margin: 28px 0 0; max-width: 58ch;">Deploy a dedicated AI operator alongside your website. It works from your approved brand rules, learns your business context, and turns ongoing site work into a managed queue instead of a future project.</p>
+    </div>
+    <div style="position: relative; min-height: 310px; overflow: hidden; border: 1px solid #e9e6e0; border-radius: 8px; background: #f7f5f0;">
+      <div style="position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; z-index: 1; padding: 14px 16px; font-size: 9px; letter-spacing: 0.14em; color: #4b4842;"><span>HUMAN / IN LOOP</span><span style="color: #ffb224;">OPERATOR_01</span></div>
+      <div style="position: absolute; right: 16px; bottom: 14px; left: 16px; z-index: 1; border-top: 1px solid #ffb22455;"></div>
+      <img src="./The%20Console/profile-picture.png" alt="Your Name" style="position: absolute; right: 0; bottom: -2px; width: min(100%, 310px); height: 320px; object-fit: contain; object-position: bottom right; filter: saturate(0.9) contrast(1.02);">
+    </div>
+  </div>
+  <div data-fade="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; background: #2b2925; border: 1px solid #2b2925; margin-top: 58px;">
+    <div style="background: #131211; padding: 24px; min-height: 152px;"><div style="font-size: 10px; letter-spacing: 0.15em; color: #ffb224;">01 / PRESENCE</div><div style="font-size: 16px; font-weight: 500; margin-top: 15px;">Content &amp; SEO</div><p style="font-size: 12px; font-weight: 300; line-height: 1.65; color: #a5a196; margin: 12px 0 0;">Keeps pages current, finds search gaps, and prepares improvements that earn attention.</p></div>
+    <div style="background: #131211; padding: 24px; min-height: 152px;"><div style="font-size: 10px; letter-spacing: 0.15em; color: #ffb224;">02 / RESPONSE</div><div style="font-size: 16px; font-weight: 500; margin-top: 15px;">Enquiry replies</div><p style="font-size: 12px; font-weight: 300; line-height: 1.65; color: #a5a196; margin: 12px 0 0;">Drafts fast, on-brand responses and routes anything sensitive or high-value to you.</p></div>
+    <div style="background: #131211; padding: 24px; min-height: 152px;"><div style="font-size: 10px; letter-spacing: 0.15em; color: #ffb224;">03 / EVOLUTION</div><div style="font-size: 16px; font-weight: 500; margin-top: 15px;">Design &amp; features</div><p style="font-size: 12px; font-weight: 300; line-height: 1.65; color: #a5a196; margin: 12px 0 0;">Turns new offers, feedback, and ideas into tested design updates and useful new tools.</p></div>
+    <div style="background: #131211; padding: 24px; min-height: 152px;"><div style="font-size: 10px; letter-spacing: 0.15em; color: #ffb224;">04 / CONTROL</div><div style="font-size: 16px; font-weight: 500; margin-top: 15px;">You approve</div><p style="font-size: 12px; font-weight: 300; line-height: 1.65; color: #a5a196; margin: 12px 0 0;">Every meaningful change is visible, reviewable, and ready for your sign-off before it goes live.</p></div>
+  </div>
+  <div data-fade="" style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-top: 28px; padding: 18px 0; border-top: 1px solid #2b2925; border-bottom: 1px solid #2b2925; font-size: 12px; color: #a5a196;"><span style="color: #ffb224; letter-spacing: 0.12em; font-size: 10px;">OPERATING MODE</span><span>AI executes the repeatable work. You keep the authority. We keep a human eye on the system.</span></div>
+</section>
+
+<!-- ============ 5 · SEO + AEO ============ -->
+<section id="search" data-screen-label="SEO and AEO" style="max-width: 1100px; margin: 0 auto; padding: 110px 24px; box-sizing: border-box; border-top: 1px solid #2b2925;">
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #ffb224;">05 / DISCOVERABILITY</div>
+  <div data-fade="" style="display: flex; gap: 48px; justify-content: space-between; align-items: end; flex-wrap: wrap; margin-top: 28px;">
+    <h2 style="font-size: clamp(28px, 4vw, 46px); font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; margin: 0; max-width: 18ch; text-wrap: pretty;">Built to be found in search and chosen in answers.</h2>
+    <p style="font-size: 14px; font-weight: 300; color: #cfcabf; line-height: 1.75; max-width: 52ch; margin: 0;">We pair technical SEO with AEO, making your expertise easy for both search engines and AI answer engines to understand, trust, and surface.</p>
+  </div>
+  <div data-fade="" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: #2b2925; border: 1px solid #2b2925; margin-top: 54px;">
+    <div style="background: #131211; padding: clamp(24px, 4vw, 38px);">
+      <div style="font-size: 10px; letter-spacing: 0.16em; color: #ffb224;">SEO / SEARCH ENGINE OPTIMIZATION</div>
+      <h3 style="font-size: 20px; font-weight: 500; margin: 20px 0 0;">Earn the right traffic.</h3>
+      <p style="font-size: 13px; font-weight: 300; color: #a5a196; line-height: 1.7; margin: 16px 0 0;">Technical health, search-led site structure, useful content, and performance improvements that help people find you when intent is high.</p>
+      <div style="margin-top: 28px; padding-top: 16px; border-top: 1px solid #2b2925; font-size: 10px; letter-spacing: 0.12em; color: #8d897f;">TECHNICAL SEO · CONTENT · CONVERSION PATHS</div>
+    </div>
+    <div style="background: rgba(255,178,36,0.035); padding: clamp(24px, 4vw, 38px);">
+      <div style="font-size: 10px; letter-spacing: 0.16em; color: #ffb224;">AEO / ANSWER ENGINE OPTIMIZATION</div>
+      <h3 style="font-size: 20px; font-weight: 500; margin: 20px 0 0;">Become the trusted answer.</h3>
+      <p style="font-size: 13px; font-weight: 300; color: #a5a196; line-height: 1.7; margin: 16px 0 0;">Clear entity signals, structured information, and expert-led pages designed so AI assistants can accurately cite and recommend your business.</p>
+      <div style="margin-top: 28px; padding-top: 16px; border-top: 1px solid #ffb22455; font-size: 10px; letter-spacing: 0.12em; color: #8d897f;">STRUCTURED DATA · ENTITY CLARITY · ANSWER CONTENT</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 · FOUNDING OFFER ============ -->
+<section id="offer" data-screen-label="Founding offer" style="max-width: 1100px; margin: 0 auto; padding: 110px 24px; box-sizing: border-box; border-top: 1px solid #2b2925;">
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">06 / CONTRACT</div>
+  <div data-fade="" style="margin-top: 40px; border: 1px solid #ffb22455; padding: clamp(28px, 5vw, 64px); max-width: 760px;">
+    <div style="display: flex; align-items: center; gap: 10px; font-size: 10px; letter-spacing: 0.16em; color: #ffb224;">
+      <span style="width: 5px; height: 5px; border-radius: 50%; background: #ffb224; animation: dotPulseSlow 3s ease-in-out infinite;"></span>
+      FOUNDING_OFFER.CONF · SLOTS REMAINING: 5
+    </div>
+    <h2 style="font-size: clamp(26px, 3.6vw, 40px); font-weight: 500; line-height: 1.25; margin: 28px 0 0; text-wrap: pretty;">Your first project. Up to two weeks of work. Zero upfront.</h2>
+    <p style="font-size: 14px; font-weight: 300; color: #cfcabf; line-height: 1.75; margin: 26px 0 0; max-width: 58ch; text-wrap: pretty;">We're building our public portfolio, and we'd rather prove ourselves than pitch ourselves. Bring us a real project. We'll deliver it. If the result isn't what we promised, you owe nothing. If it is, you pay the agreed price and we both get a case study.</p>
+    <div style="margin-top: 36px; border-top: 1px solid #2b2925; font-size: 12.5px; color: #a5a196; line-height: 1.6;">
+      <div style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #2b2925;"><span style="color: #63605a;">term_01</span><span>scope agreed in writing before start</span></div>
+      <div style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #2b2925;"><span style="color: #63605a;">term_02</span><span>up to 2 weeks of delivery work</span></div>
+      <div style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #2b2925;"><span style="color: #63605a;">term_03</span><span>you review before you pay</span></div>
+      <div style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #2b2925;"><span style="color: #63605a;">term_04</span><span>limited to 5 founding clients</span></div>
+    </div>
+    <div style="font-family: 'Newsreader', serif; font-style: italic; font-size: 19px; color: #c9c4b8; margin-top: 32px;">— Your Name, operator</div>
+    <a href="#contact" style="display: inline-block; background: #ffb224; color: #131211; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; padding: 14px 26px; margin-top: 36px;" style-hover="background: #ffc351; color: #131211;">CLAIM A FOUNDING SLOT</a>
+  </div>
+</section>
+
+<!-- ============ 7 · PORTFOLIO ============ -->
+<section data-screen-label="Portfolio" style="max-width: 1100px; margin: 0 auto; padding: 110px 24px; box-sizing: border-box; border-top: 1px solid #2b2925;">
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">07 / JOB QUEUE</div>
+  <h2 data-fade="" style="font-size: clamp(22px, 3vw, 32px); font-weight: 400; margin: 26px 0 0; text-wrap: pretty;">The next case study could be yours.</h2>
+  <div data-fade="" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1px; background: #2b2925; border: 1px solid #2b2925; margin-top: 48px;">
+    <div style="background: #131211; padding: 26px 24px; min-height: 170px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 10px; letter-spacing: 0.16em; color: #63605a;"><span>JOB / 001</span><span>—</span></div>
+      <div>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 0.14em; color: #8d897f;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #8d897f; animation: dotPulse 4s ease-in-out infinite;"></span>SLOT OPEN — AWAITING PROJECT</div>
+        <div style="font-family: 'Newsreader', serif; font-style: italic; font-size: 16px; color: #c9c4b8; margin-top: 14px;">— your project renders here.</div>
+      </div>
+    </div>
+    <div style="background: #131211; padding: 26px 24px; min-height: 170px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 10px; letter-spacing: 0.16em; color: #63605a;"><span>JOB / 002</span><span>ETA: DAYS</span></div>
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 0.14em; color: #ffb224;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #ffb224; animation: dotPulse 2s ease-in-out infinite;"></span>IN PRODUCTION</div>
+    </div>
+    <div style="background: #131211; padding: 26px 24px; min-height: 170px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 10px; letter-spacing: 0.16em; color: #63605a;"><span>JOB / 003</span><span>—</span></div>
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 0.14em; color: #8d897f;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #8d897f; animation: dotPulse 4s ease-in-out infinite; animation-delay: 1s;"></span>SLOT OPEN — AWAITING PROJECT</div>
+    </div>
+    <div style="background: #131211; padding: 26px 24px; min-height: 170px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 10px; letter-spacing: 0.16em; color: #63605a;"><span>JOB / 004</span><span>—</span></div>
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 0.14em; color: #8d897f;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #8d897f; animation: dotPulse 4s ease-in-out infinite; animation-delay: 2s;"></span>SLOT OPEN — AWAITING PROJECT</div>
+    </div>
+    <div style="background: #131211; padding: 26px 24px; min-height: 170px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 10px; letter-spacing: 0.16em; color: #63605a;"><span>JOB / 005</span><span>—</span></div>
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 0.14em; color: #8d897f;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #8d897f; animation: dotPulse 4s ease-in-out infinite; animation-delay: 3s;"></span>SLOT OPEN — AWAITING PROJECT</div>
+    </div>
+    <div style="background: #131211; padding: 26px 24px; min-height: 170px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 10px; letter-spacing: 0.16em; color: #63605a;"><span>JOB / 006</span><span>—</span></div>
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: 0.14em; color: #8d897f;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #8d897f; animation: dotPulse 4s ease-in-out infinite; animation-delay: 0.5s;"></span>SLOT OPEN — AWAITING PROJECT</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8 · HOW IT WORKS ============ -->
+<section data-screen-label="How it works" style="max-width: 1100px; margin: 0 auto; padding: 110px 24px; box-sizing: border-box; border-top: 1px solid #2b2925;">
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">08 / RUNBOOK</div>
+  <h2 data-fade="" style="font-size: clamp(22px, 3vw, 32px); font-weight: 400; margin: 26px 0 0;">How it works</h2>
+  <div data-fade="" style="margin-top: 48px; border-top: 1px solid #2b2925;">
+    <div style="display: flex; gap: 28px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid #2b2925;">
+      <span style="font-size: 12px; color: #63605a; flex: 0 0 32px;">01</span>
+      <span style="font-size: 15px; font-weight: 400;">Brief — tell us what you need, in plain language.</span>
+    </div>
+    <div style="display: flex; gap: 28px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid #2b2925;">
+      <span style="font-size: 12px; color: #63605a; flex: 0 0 32px;">02</span>
+      <span style="font-size: 15px; font-weight: 400;">Build — the pipeline produces the work in days, not weeks.</span>
+    </div>
+    <div style="display: flex; gap: 28px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid #2b2925; flex-wrap: wrap;">
+      <span style="font-size: 12px; color: #ffb224; flex: 0 0 32px;">03</span>
+      <span style="display: flex; flex-direction: column; gap: 10px; flex: 1 1 400px;">
+        <span style="font-size: 15px; font-weight: 400;">Human review — nothing ships unchecked.</span>
+        <span style="font-family: 'Newsreader', serif; font-style: italic; font-size: 16px; color: #c9c4b8; line-height: 1.55; max-width: 52ch;">a person is your point of contact throughout — and the last set of eyes on everything we ship.</span>
+      </span>
+    </div>
+    <div style="display: flex; gap: 28px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid #2b2925;">
+      <span style="font-size: 12px; color: #63605a; flex: 0 0 32px;">04</span>
+      <span style="font-size: 15px; font-weight: 400;">Deliver — you review, then you pay.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9 · CLOSE ============ -->
+<section id="contact" data-screen-label="Close" style="max-width: 1100px; margin: 0 auto; padding: 130px 24px 90px; box-sizing: border-box; border-top: 1px solid #2b2925;">
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">09 / END OF TRANSMISSION</div>
+  <h2 data-fade="" style="font-size: clamp(28px, 4.4vw, 52px); font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; margin: 30px 0 0; max-width: 22ch; text-wrap: pretty;">Two weeks of work. Zero risk. One decision.</h2>
+  <div data-fade="" style="margin-top: 44px; display: flex; flex-direction: column; gap: 8px;">
+    <div style="font-family: 'Newsreader', serif; font-style: italic; font-size: 20px; color: #c9c4b8;">— Your Name</div>
+    <div style="font-size: 13px; font-weight: 300; color: #a5a196;">Designer-engineer. Ten years shipping products; now supervising a pipeline that ships them faster.</div>
+  </div>
+  <div data-fade="" style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 48px;">
+    <a href="mailto:hello@example.com" style="display: inline-block; background: #ffb224; color: #131211; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; padding: 14px 26px;" style-hover="background: #ffc351; color: #131211;">START THE CONVERSATION</a>
+    <a href="mailto:hello@example.com" style="font-size: 13px; color: #a5a196; border-bottom: 1px solid #3a372f; padding-bottom: 2px;" style-hover="color: #e9e6e0;">hello@example.com</a>
+  </div>
+  <div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 110px; padding-top: 20px; border-top: 1px solid #2b2925; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #63605a;">
+    <span>OPS / CONSOLE · HUMAN-LED AI PRODUCTION</span>
+    <span style="display: flex; align-items: center; gap: 8px;"><span style="width: 5px; height: 5px; border-radius: 50%; background: #ffb224; animation: dotPulseSlow 3s ease-in-out infinite;"></span>SYSTEM NOMINAL · LOCAL</span>
+  </div>
+</section>
 </body>
 </html>
