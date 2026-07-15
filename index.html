@@ -16,6 +16,18 @@
   @keyframes dotPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
   @keyframes dotPulseSlow { 0%, 100% { opacity: 0.9; } 50% { opacity: 0.2; } }
   @keyframes cursorBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  .work-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 48px; background: #2b2925; border: 1px solid #2b2925; }
+  .work-card { display: block; background: #131211; color: #e9e6e0; overflow: hidden; transition: background 0.25s ease; }
+  .work-card:hover { background: #1b1916; color: #e9e6e0; }
+  .work-card:focus-visible { outline: 2px solid #ffb224; outline-offset: -2px; }
+  .work-preview { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-bottom: 1px solid #2b2925; transition: transform 0.4s ease; }
+  .work-card:hover .work-preview { transform: scale(1.025); }
+  .work-meta { display: flex; align-items: start; justify-content: space-between; gap: 18px; padding: 22px; }
+  .work-type { margin: 0; color: #ffb224; font-size: 10px; letter-spacing: 0.14em; }
+  .work-title { margin: 10px 0 0; font-size: 18px; font-weight: 500; letter-spacing: 0; }
+  .work-description { margin: 11px 0 0; color: #a5a196; font-size: 12px; font-weight: 300; line-height: 1.65; max-width: 44ch; }
+  .work-link { flex: 0 0 auto; color: #ffb224; font-size: 16px; line-height: 1; padding-top: 4px; }
+  @media (max-width: 640px) { .work-gallery { grid-template-columns: 1fr; } .work-meta { padding: 18px; } }
 </style>
 
 </head>
@@ -29,6 +41,7 @@
     <span>PIPELINE / ACTIVE</span>
   </div>
   <div style="display: flex; align-items: center; gap: 18px;">
+    <a href="#work" style="color: #a5a196;">WORK</a>
     <a href="#operator" style="color: #a5a196;">AI OPERATOR</a>
     <span>LOCAL LOCAL</span>
     <a href="#offer" style="color: #ffb224; border: 1px solid #ffb22455; padding: 6px 12px; letter-spacing: 0.14em;" style-hover="background: rgba(255,178,36,0.08); color: #ffb224;">FOUNDING SLOT →</a>
@@ -123,9 +136,36 @@
   </div>
 </section>
 
-<!-- ============ 4 · AI SITE OPERATOR ============ -->
+<!-- ============ 4 · SELECTED WORK ============ -->
+<section id="work" data-screen-label="Selected work" style="max-width: 1100px; margin: 0 auto; padding: 110px 24px; box-sizing: border-box; border-top: 1px solid #2b2925;">
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #ffb224;">04 / SELECTED WORK</div>
+  <div data-fade="" style="display: flex; align-items: end; justify-content: space-between; gap: 32px; flex-wrap: wrap; margin-top: 26px;">
+    <h2 style="font-size: clamp(28px, 4vw, 46px); font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; margin: 0; max-width: 17ch; text-wrap: pretty;">Work made for distinct audiences.</h2>
+    <p style="font-size: 14px; font-weight: 300; color: #cfcabf; line-height: 1.75; max-width: 47ch; margin: 0;">Four live examples of different visual systems, customer journeys, and interaction models. Select any project to explore the working demo.</p>
+  </div>
+  <div data-fade="" class="work-gallery">
+    <a class="work-card" href="https://ee-html.up.railway.app/app/linecraft-sports/" target="_blank" rel="noopener noreferrer" aria-label="Visit LineCraft Sports Intelligence demo">
+      <img class="work-preview" src="assets/work/linecraft-sports.png" alt="LineCraft Sports Intelligence website preview">
+      <div class="work-meta"><div><p class="work-type">SPORTS INTELLIGENCE</p><h3 class="work-title">LineCraft</h3><p class="work-description">A high-energy betting intelligence publication with daily market signals, bookmaker comparisons, and beginner-friendly guides.</p></div><span class="work-link" aria-hidden="true">↗</span></div>
+    </a>
+    <a class="work-card" href="https://ee-html.up.railway.app/app/olena-globa-relocation/" target="_blank" rel="noopener noreferrer" aria-label="Visit Olena Globa relocation demo">
+      <img class="work-preview" src="assets/work/olena-globa-relocation.png" alt="Olena Globa relocation website preview">
+      <div class="work-meta"><div><p class="work-type">RELOCATION &amp; PROPERTY</p><h3 class="work-title">Olena Globa</h3><p class="work-description">An editorial, hospitality-led advisory site that presents international relocation as a considered personal transition.</p></div><span class="work-link" aria-hidden="true">↗</span></div>
+    </a>
+    <a class="work-card" href="https://ee-html.up.railway.app/app/pattern-play/" target="_blank" rel="noopener noreferrer" aria-label="Visit Pattern Play Kiosk demo">
+      <img class="work-preview" src="assets/work/pattern-play.png" alt="Pattern Play Kiosk interactive design tool preview">
+      <div class="work-meta"><div><p class="work-type">INTERACTIVE KIOSK</p><h3 class="work-title">Pattern Play</h3><p class="work-description">A tactile, playful pattern-making experience with drag-and-drop stickers, live repeats, and instant product mockups.</p></div><span class="work-link" aria-hidden="true">↗</span></div>
+    </a>
+    <a class="work-card" href="https://ee-html.up.railway.app/app/alex-carter-portfolio/" target="_blank" rel="noopener noreferrer" aria-label="Visit Alex Carter portfolio demo">
+      <img class="work-preview" src="assets/work/alex-carter-portfolio.png" alt="Alex Carter portfolio website preview">
+      <div class="work-meta"><div><p class="work-type">CREATIVE PORTFOLIO</p><h3 class="work-title">Alex Carter</h3><p class="work-description">A polished creative-developer portfolio that combines dramatic motion language, project stories, and a conversion-focused contact flow.</p></div><span class="work-link" aria-hidden="true">↗</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ============ 5 · AI SITE OPERATOR ============ -->
 <section id="operator" data-screen-label="AI Site Operator" style="max-width: 1100px; margin: 0 auto; padding: 110px 24px; box-sizing: border-box; border-top: 1px solid #2b2925;">
-  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #ffb224;">04 / ONGOING SYSTEM</div>
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #ffb224;">05 / ONGOING SYSTEM</div>
   <div data-fade="" style="display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr); gap: clamp(32px, 6vw, 82px); align-items: end; margin-top: 34px;">
     <div>
       <h2 style="font-size: clamp(28px, 4vw, 46px); font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; margin: 0; max-width: 18ch; text-wrap: pretty;">Your site can keep getting better after launch.</h2>
@@ -146,9 +186,9 @@
   <div data-fade="" style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-top: 28px; padding: 18px 0; border-top: 1px solid #2b2925; border-bottom: 1px solid #2b2925; font-size: 12px; color: #a5a196;"><span style="color: #ffb224; letter-spacing: 0.12em; font-size: 10px;">OPERATING MODE</span><span>AI executes the repeatable work. You keep the authority. We keep a human eye on the system.</span></div>
 </section>
 
-<!-- ============ 5 · SEO + AEO ============ -->
+<!-- ============ 6 · SEO + AEO ============ -->
 <section id="search" data-screen-label="SEO and AEO" style="max-width: 1100px; margin: 0 auto; padding: 110px 24px; box-sizing: border-box; border-top: 1px solid #2b2925;">
-  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #ffb224;">05 / DISCOVERABILITY</div>
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #ffb224;">06 / DISCOVERABILITY</div>
   <div data-fade="" style="display: flex; gap: 48px; justify-content: space-between; align-items: end; flex-wrap: wrap; margin-top: 28px;">
     <h2 style="font-size: clamp(28px, 4vw, 46px); font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; margin: 0; max-width: 18ch; text-wrap: pretty;">Built to be found in search and chosen in answers.</h2>
     <p style="font-size: 14px; font-weight: 300; color: #cfcabf; line-height: 1.75; max-width: 52ch; margin: 0;">We pair technical SEO with AEO, making your expertise easy for both search engines and AI answer engines to understand, trust, and surface.</p>
@@ -169,9 +209,9 @@
   </div>
 </section>
 
-<!-- ============ 6 · FOUNDING OFFER ============ -->
+<!-- ============ 7 · FOUNDING OFFER ============ -->
 <section id="offer" data-screen-label="Founding offer" style="max-width: 1100px; margin: 0 auto; padding: 110px 24px; box-sizing: border-box; border-top: 1px solid #2b2925;">
-  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">06 / CONTRACT</div>
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">07 / CONTRACT</div>
   <div data-fade="" style="margin-top: 40px; border: 1px solid #ffb22455; padding: clamp(28px, 5vw, 64px); max-width: 760px;">
     <div style="display: flex; align-items: center; gap: 10px; font-size: 10px; letter-spacing: 0.16em; color: #ffb224;">
       <span style="width: 5px; height: 5px; border-radius: 50%; background: #ffb224; animation: dotPulseSlow 3s ease-in-out infinite;"></span>
@@ -190,9 +230,9 @@
   </div>
 </section>
 
-<!-- ============ 7 · PORTFOLIO ============ -->
+<!-- ============ 8 · PORTFOLIO ============ -->
 <section data-screen-label="Portfolio" style="max-width: 1100px; margin: 0 auto; padding: 110px 24px; box-sizing: border-box; border-top: 1px solid #2b2925;">
-  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">07 / JOB QUEUE</div>
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">08 / JOB QUEUE</div>
   <h2 data-fade="" style="font-size: clamp(22px, 3vw, 32px); font-weight: 400; margin: 26px 0 0; text-wrap: pretty;">The next case study could be yours.</h2>
   <div data-fade="" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1px; background: #2b2925; border: 1px solid #2b2925; margin-top: 48px;">
     <div style="background: #131211; padding: 26px 24px; min-height: 170px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;">
@@ -225,9 +265,9 @@
   </div>
 </section>
 
-<!-- ============ 8 · HOW IT WORKS ============ -->
+<!-- ============ 9 · HOW IT WORKS ============ -->
 <section data-screen-label="How it works" style="max-width: 1100px; margin: 0 auto; padding: 110px 24px; box-sizing: border-box; border-top: 1px solid #2b2925;">
-  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">08 / RUNBOOK</div>
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">09 / RUNBOOK</div>
   <h2 data-fade="" style="font-size: clamp(22px, 3vw, 32px); font-weight: 400; margin: 26px 0 0;">How it works</h2>
   <div data-fade="" style="margin-top: 48px; border-top: 1px solid #2b2925;">
     <div style="display: flex; gap: 28px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid #2b2925;">
@@ -252,9 +292,9 @@
   </div>
 </section>
 
-<!-- ============ 9 · CLOSE ============ -->
+<!-- ============ 10 · CLOSE ============ -->
 <section id="contact" data-screen-label="Close" style="max-width: 1100px; margin: 0 auto; padding: 130px 24px 90px; box-sizing: border-box; border-top: 1px solid #2b2925;">
-  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">09 / END OF TRANSMISSION</div>
+  <div data-fade="" style="font-size: 10px; letter-spacing: 0.16em; color: #8d897f;">10 / END OF TRANSMISSION</div>
   <h2 data-fade="" style="font-size: clamp(28px, 4.4vw, 52px); font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; margin: 30px 0 0; max-width: 22ch; text-wrap: pretty;">Two weeks of work. Zero risk. One decision.</h2>
   <div data-fade="" style="margin-top: 44px; display: flex; flex-direction: column; gap: 8px;">
     <div style="font-family: 'Newsreader', serif; font-style: italic; font-size: 20px; color: #c9c4b8;">— Your Name</div>
